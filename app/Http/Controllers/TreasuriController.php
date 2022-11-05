@@ -162,6 +162,9 @@ class TreasuriController extends Controller
 
     }
 
+
+
+
     /**
      * Remove the specified resource from storage.
      *
@@ -171,5 +174,16 @@ class TreasuriController extends Controller
     public function destroy(Treasuri $treasuri)
     {
         //
+    }
+
+       // Search
+
+       public function ajax_search(Request $request){
+        if($request->ajax()){
+            $search_by_text = $request->search_by_text;
+            $data = Treasuri::where('name','LIKE',"%{$search_by_text}%")->Orderby('id','DESC')->paginate(PAGINATING_COUNT);
+            return view('admin.treasuries.ajax_search',['data'=>$data]);
+        }
+
     }
 }

@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="{{ asset('public_asset/css/bootstrap_rtl-v4.2.1/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('public_asset/css/bootstrap_rtl-v4.2.1/custom_rtl.css') }}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('public_asset/css/bootstrap_rtl-v4.2.1/custom_rtl.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap_rtl-v4.2.1/custom_rtl.css') }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{ asset('public_asset/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('public_asset/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -76,8 +76,8 @@
 <!-- Toastr -->
 {{-- <script src="{{ asset('admin/plugins/toastr/toastr.min.js') }}"></scrip --}}
 <!-- jQuery -->
-<script src="{{ asset('public_asset/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('public_asset/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

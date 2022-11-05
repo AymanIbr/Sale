@@ -11,16 +11,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>@yield('HomeName')</title>
   <!-- Toastr -->
-  <link rel="stylesheet" href="{{asset('public_asset/plugins/toastr/toastr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('admin_assets/plugins/toastr/toastr.min.css')}}">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{ asset('public_asset/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('public_asset/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="{{ asset('public_asset/fonts/SansPro/SansPro.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('public_asset/css/bootstrap_rtl-v4.2.1/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('public_asset/css/bootstrap_rtl-v4.2.1/custom_rtl.css') }}">
-  <link rel="stylesheet" href="{{ asset('public_asset/css/mycustomstyle.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/fonts/SansPro/SansPro.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap_rtl-v4.2.1/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap_rtl-v4.2.1/custom_rtl.css') }}">
+  <link rel="stylesheet" href="{{ asset('admin_assets/css/mycustomstyle.css') }}">
 @yield('css')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{ asset('public_asset/admin/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="{{ asset('admin_assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -74,17 +74,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="{{ asset('public_asset/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('public_asset/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('public_asset/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('admin_assets/dist/js/adminlte.min.js') }}"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- Toastr -->
 <script src="{{asset('public_asset/plugins/toastr/toastr.min.js')}}"></script>
 
 <!--  استدعاء ملف الجافا سكريبت  الي عملتوا-->
-<script src="{{ asset('public_asset/js/general.js') }}"></script>
+<script src="{{ asset('admin_assets/js/general.js') }}"></script>
 
 @yield('script')
 </body>

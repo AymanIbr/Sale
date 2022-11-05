@@ -41,6 +41,8 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
     Route::post('/adminpanelsetting/update',[Admin_pnel_settingsController::class , 'update'])->name('admin.adminPanelSetting.update');
 
     Route::resource('treasuries',TreasuriController::class);
+    // search
+    Route::post('/treasuries/ajax_search',[TreasuriController::class,'ajax_search'])->name('admin.treasuries.ajax_search');
 
 
     Route::get('logout',[authController::class , 'logout'])->name('admin.logout');

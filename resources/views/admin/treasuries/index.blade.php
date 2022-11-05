@@ -12,19 +12,23 @@
       <div class="card">
         <div class="card-header">
           <h3 class="card-title card_title_center">بيانات الخزن </h3>
-          <a href="{{ route('treasuries.create') }}" class="btn btn-sm btn-success">اضافة جديد</a>
+
+                  {{-- search --}}
+                  <input type="hidden" id="search_token" value="{{csrf_token()}}">
+                    <input type="hidden" id="ajax_search_url" value="{{route('admin.treasuries.ajax_search')}}">
+              <a href="{{ route('treasuries.create') }}" class="btn btn-sm btn-success">اضافة جديد</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
             <div class="col-md-4">
-                <input type="text" id="search_by_text" placeholder="بحث الاسم" class="form-control">
+                <input type="text" id= "search_by_text" class="form-control" placeholder="بحث بالاسم"> <br>
             </div>
-            <br>
-            @if (@isset($data) && !@empty($data))
-            @php
+
+            <div id="ajax_responce_searchDiv">
+                @if (@isset($data) && !@empty($data))
+                @php
                 $i = 1 ;
             @endphp
-            <div id="ajax_response_serarchDiv">
                 <table id="example2" class="table table-bordered table-hover">
                     {{-- الكلاس موجود في ملف الcss  --}}
                     <thead class="custom_thead">
@@ -72,14 +76,14 @@
                         @endforeach
                     </tbody>
                           </table>
-                        <br>
-                        {{ $data->links() }}
-            </div>
-            @else
-            <div class="alert alert-danger">
-                عفوا لا توجد بيانات لعرضها
-            </div>
-            @endif
+
+                        {{-- <br>
+                        {{ $data->links() }} --}}
+                        @else
+                        <div class="alert alert-danger"> عفوا لا توجد بيانات لعرضها !!</div>
+                       @endif
+                    </div>
+
         </div>
         <!-- /.card-body -->
       </div>
@@ -89,3 +93,6 @@
 
 @endsection
 
+@section('script')
+<script src="{{ asset('admin_assets/js/treasuries.js')}}"></script>
+@endsection

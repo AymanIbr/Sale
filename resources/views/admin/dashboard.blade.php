@@ -8,7 +8,7 @@
 
 @section('content')
 
-    <div class="row" style="background-image: url({{ asset('public_asset/images/dash.jpg') }});background-size:cover;background-repeate:no-repeate;min-height:600px"></div>
+    <div class="row" style="background-image: url({{ asset('admin_assets/images/dash.jpg') }});background-size:cover;background-repeate:no-repeate;min-height:600px"></div>
 
 @endsection
 
