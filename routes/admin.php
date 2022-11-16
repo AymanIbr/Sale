@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\Admin_pnel_settingsController;
 use App\Http\Controllers\Admin\authController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\SalesMaterialTypeController;
 use App\Http\Controllers\TreasuriController;
+use App\Models\Sales_material_type;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +49,9 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
     Route::get('/treasuries/Add_treasuries_delivary/{id}',[TreasuriController::class,'Add_treasuries_delivary'])->name('admin.treasuries.Add_treasuries_delivary');
     Route::post('/treasuries/store_treasuries_delivery/{id}',[TreasuriController::class,'store_treasuries_delivery'])->name('admin.treasuries.store_treasuries_delivery');
     Route::get('/treasuries/delete_treasuries_delivery/{id}',[TreasuriController::class,'delete_treasuries_delivery'])->name('admin.treasuries.delete_treasuries_delivery');
+
+
+    Route::resource('sales_material_types',SalesMaterialTypeController::class);
 
 
 

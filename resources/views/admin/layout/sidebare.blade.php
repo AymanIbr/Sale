@@ -29,6 +29,13 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{route('sales_material_types.index')}}" class="nav-link">
+              <p>
+                 بيانات فئات الفواتير
+              </p>
+            </a>
+          </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
