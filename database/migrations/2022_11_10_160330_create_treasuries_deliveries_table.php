@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('treasuris', function (Blueprint $table) {
+        Schema::create('treasuries_deliveries', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->tinyInteger('is_master')->default(0);
-            $table->bigInteger('last_isal_exchange');
-            $table->bigInteger('last_isal_collect');
-            $table->tinyInteger('active')->default(1);
+            // id  جددول teasuries
+            $table->integer('treasuries_id');
+            $table->integer('treasuries_can_delivery_id');
             $table->integer('added_by');
-            $table->integer('updated_by');
+            $table->integer('updated_by')->nullable();
             $table->integer('com_code');
-            $table->date('date');
             $table->timestamps();
         });
     }
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('treasuris');
+        Schema::dropIfExists('treasuries_deliveries');
     }
 };

@@ -24,24 +24,22 @@ class TreasuriesRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'is_master' => 'required',
-            'last_isal_exhcange' => 'required|min:0',
-            'last_isal_collect' => 'required|min:0',
-            'active' => 'required'
+            'name'=> 'required',
+            'is_master'=> 'required',
+            'last_isal_exhcange'=> 'required|integer|min:0',
+            'last_isal_collect'=> 'required|integer|min:0',
+            'active'=>'required',
         ];
-
     }
-
     public function messages(){
-        return [
-            'name.required' => 'اسم الخزنة مطلوب',
-            'is_master.required' => 'نوع الخزنة مطلوب',
-            'active.required' => 'حالة تفعيل الخزنة مطلوب',
-            'last_isal_exhcange.required' => 'اخر رقم ايصال صرف نقدية لهذه الخزنة',
-            'last_isal_exhcange.integer' => ' قيمة رقم الايصال تكون قيمة صحيحة',
-            'last_isal_collect.required' => 'اخر رقم ايصال صرف نقدية لهذه الخزنة',
-            'last_isal_collect.integer' => ' قيمة رقم الايصال تكون قيمة صحيحة',
-        ];
+       return [
+        'name.required' => 'اسم الخزنة مطلوب',
+         'is_master.required'=> 'نوع الخزنة مطلوب',
+         'active.required'=> 'حالة تفعيل الشركة مطلوبة',
+         'last_isal_exhcange.required'=>'اخر رقم ايصال صرف نقدية لهذه الخزنة',
+         'last_isal_exhcange.integer'=>'قيمة رقم الايصال تكون صحيحة',
+         'last_isal_collect.required'=>'اخر رقم ايصال صرف نقدية لهذه الخزنة',
+         'last_isal_collect.integer'=>' قيمة رقم الايصال تكون صحيحة ',
+       ];
     }
 }

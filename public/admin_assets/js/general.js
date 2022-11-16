@@ -19,4 +19,16 @@ $(document).on('click','#cancle_update_image',function(e){
     return false ;
 });
 
+// زر الحذف في الdetalis
+$(document).on('click','are_you_Sure',function(e){
+    var res = confirm ("هل أنت متأكد ؟");
+
+    if(!res){
+        return false ;
+    }
+});
+
+
+
+
 });

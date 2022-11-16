@@ -83,9 +83,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Toastr -->
 <script src="{{asset('public_asset/plugins/toastr/toastr.min.js')}}"></script>
 
+@yield('script')
 <!--  استدعاء ملف الجافا سكريبت  الي عملتوا-->
 <script src="{{ asset('admin_assets/js/general.js') }}"></script>
 
-@yield('script')
 </body>
 </html>

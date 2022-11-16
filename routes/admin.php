@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-define('PAGINATING_COUNT',10);
+define('PAGINATING_COUNT',6);
 
 Route::prefix('sales/admin/')->middleware('guest:admin')->namespace('Admin')->group(function(){
 
@@ -43,6 +43,12 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
     Route::resource('treasuries',TreasuriController::class);
     // search
     Route::post('/treasuries/ajax_search',[TreasuriController::class,'ajax_search'])->name('admin.treasuries.ajax_search');
+    Route::get('/treasuries/details/{id}',[TreasuriController::class,'details'])->name('admin.treasuries.details');
+    Route::get('/treasuries/Add_treasuries_delivary/{id}',[TreasuriController::class,'Add_treasuries_delivary'])->name('admin.treasuries.Add_treasuries_delivary');
+    Route::post('/treasuries/store_treasuries_delivery/{id}',[TreasuriController::class,'store_treasuries_delivery'])->name('admin.treasuries.store_treasuries_delivery');
+    Route::get('/treasuries/delete_treasuries_delivery/{id}',[TreasuriController::class,'delete_treasuries_delivery'])->name('admin.treasuries.delete_treasuries_delivery');
+
+
 
 
     Route::get('logout',[authController::class , 'logout'])->name('admin.logout');

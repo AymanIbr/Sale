@@ -67,7 +67,7 @@
                             </td>
                             <td>
                                 <a href = "{{ route('treasuries.edit',$info->id) }}" class="btn btn-sm btn-primary">تعديل</a>
-                                <a data-id="{{ $info->id }}" class="btn btn-sm btn-info">المزيد</a>
+                                <a href="{{ route('admin.treasuries.details',$info->id) }}"  class="btn btn-sm btn-info">المزيد</a>
                             </td>
                         </tr>
                         @php
@@ -77,8 +77,8 @@
                     </tbody>
                           </table>
 
-                        {{-- <br>
-                        {{ $data->links() }} --}}
+                         <br>
+                        {{ $data->links() }}
                         @else
                         <div class="alert alert-danger"> عفوا لا توجد بيانات لعرضها !!</div>
                        @endif
@@ -92,7 +92,6 @@
   </div>
 
 @endsection
-
 @section('script')
 <script src="{{ asset('admin_assets/js/treasuries.js')}}"></script>
 @endsection
