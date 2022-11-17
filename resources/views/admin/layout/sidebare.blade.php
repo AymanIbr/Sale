@@ -36,6 +36,13 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{route('stores.index')}}" class="nav-link">
+              <p>
+                بيانات المخازن
+              </p>
+            </a>
+          </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

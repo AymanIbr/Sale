@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Admin_pnel_settingsController;
 use App\Http\Controllers\Admin\authController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\SalesMaterialTypeController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TreasuriController;
 use App\Models\Sales_material_type;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +53,7 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
 
 
     Route::resource('sales_material_types',SalesMaterialTypeController::class);
+    Route::resource('stores',StoreController::class);
 
 
 
