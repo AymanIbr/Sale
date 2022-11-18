@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Admin_pnel_settingsController;
 use App\Http\Controllers\Admin\authController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\InvUomsController;
 use App\Http\Controllers\SalesMaterialTypeController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TreasuriController;
@@ -54,6 +55,10 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
 
     Route::resource('sales_material_types',SalesMaterialTypeController::class);
     Route::resource('stores',StoreController::class);
+
+    Route::resource('uoms',InvUomsController::class);
+    Route::post('/uoms/ajax_search',[InvUomsController::class,'ajax_search'])->name('admin.uoms.ajax_search');
+
 
 
 

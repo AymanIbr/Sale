@@ -75,7 +75,7 @@
                         @endphp
                         @endforeach
                     </tbody>
-                          </table>
+                     </table>
 
                          <br>
                         {{ $data->links() }}
