@@ -13,4 +13,8 @@ class Inv_itemcard_category extends Model
     protected $fillable = [
         'name','active','added_by','updated_by','com_code','date',
           ];
+
+          public function inv_itemcards(){
+            return $this->hasMany(Inv_itemcard::class , 'inv_itemcard_categories_id','id');
+          }
 }

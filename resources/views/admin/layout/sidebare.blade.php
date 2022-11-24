@@ -58,6 +58,13 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('item_card.index') }}" class="nav-link">
+                    <p>
+                         الأصناف
+                    </p>
+                </a>
+            </li>
          </ul>
      </nav>
      <!-- /.sidebar-menu -->

@@ -13,4 +13,8 @@ class Inv_uoms extends Model
     protected $fillable = [
         'name','active','is_master','added_by','updated_by','com_code','date',
           ];
+
+          public function Inv_itemcards(){
+            return $this->hasMany(Inv_itemcard::class , 'uom_id','id');
+          }
 }

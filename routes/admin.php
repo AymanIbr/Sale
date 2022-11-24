@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\authController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\InvItemcardCategoryController;
 use App\Http\Controllers\InvUomsController;
+use App\Http\Controllers\InvItemcardController;
 use App\Http\Controllers\SalesMaterialTypeController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TreasuriController;
@@ -61,6 +62,9 @@ Route::prefix('sales/admin')->middleware('auth:admin')->group(function(){
     Route::post('/uoms/ajax_search',[InvUomsController::class,'ajax_search'])->name('admin.uoms.ajax_search');
 
     Route::resource('item_card_categories',InvItemcardCategoryController::class);
+
+    Route::post('/itemcard/ajax_search',[InvItemcardController::class,'ajax_search'])->name('admin.itemcard.ajax_search');
+    Route::resource('item_card',InvItemcardController::class);
 
 
 
